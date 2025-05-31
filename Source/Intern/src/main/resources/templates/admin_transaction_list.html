@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Management</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Quản lí</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">Người dùng</a></li>
+        <li><a href="/admin/properties" class="nav-item">Bất động sản</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Giao dịch</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Xác minh</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Pháp lí</a></li>
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Quản lý giao dịch</h2>
+    </div>
+
+    <!-- Filter by Status Form -->
+    <section id="transaction-filter">
+        <form th:action="@{/admin/transactions}" method="get">
+            <label for="status">Lọc theo trạng thái:</label>
+            <select name="status" id="status">
+                <option value="" th:selected="${status == null}">Tất cả</option>
+                <option value="Completed" th:selected="${status == 'Completed'}">Hoàn thành</option>
+                <option value="Pending" th:selected="${status == 'Pending'}">Chờ xử lý</option>
+                <option value="Cancelled" th:selected="${status == 'Cancelled'}">Hủy</option>
+            </select>
+            <button type="submit">Lọc</button>
+        </form>
+    </section>
+
+    <!-- Transaction List Section -->
+    <section id="transaction">
+        <h3>Tất cả giao dịch</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Người đăng</th>
+                <th>ID Bất động sản</th>
+                <th>Số tiền</th>
+                <th>Trạng thái</th>
+                <th>Ngày tạo</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Loop through the list of transactions -->
+            <tr th:each="transaction : ${transactions}">
+                <td th:text="${transaction.id}">1</td>
+                <td th:text="${transaction.buyer.user_name}">Buyer Name</td>
+                <td th:text="${transaction.property.id}">Property Title</td>
+                <td th:text="${transaction.transactionAmount}">$500,000</td>
+                <td th:text="${transaction.status}">Completed</td>
+                <td th:text="${transaction.transactionDate}">transactionDate</td>
+                <td>
+                    <!-- Xóa giao dịch -->
+                    <form th:action="@{/admin/transactions/{transactionId}(transactionId=${transaction.id})}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+
+                    <!-- Nút Accept -->
+                    <form th:action="@{/transaction/{transactionId}/accept(transactionId=${transaction.id})}" method="post">
+                        <button type="submit" class="accept-btn">Complete</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property</title>
+    <link rel="stylesheet" href="/css/add_property.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">
+        <h1>Trang web bất động sản</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="/properties">Bất động sản</a></li>
+    </ul>
+</div>
+
+<!-- Add Property Form -->
+<div class="property-form">
+    <h2>Thêm bất động sản mới</h2>
+    <form action="/properties/add" method="post" enctype="multipart/form-data">
+        <label for="title">Tiêu đề</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="description">Mô tả</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="price">Giá (triêu VNĐ)</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="area">Diện tích (m2)</label>
+        <input type="number" id="area" name="area" required>
+
+        <label for="location">Vị trí</label>
+        <input type="text" id="location" name="location" required>
+
+        <label for="images">Tải ảnh lên (tối đa 5 ảnh)</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple required>
+
+        <button type="submit">Thêm bất động sản</button>
+    </form>
+</div>
+
+</body>
+</html>

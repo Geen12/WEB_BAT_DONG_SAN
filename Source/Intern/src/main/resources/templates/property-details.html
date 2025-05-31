@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="/css/property-details.css">
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">
+        <h1>Trang web bất động sản</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/index">Trang chủ</a></li>
+        <li><a href="/properties">Bất động sản</a></li>
+    </ul>
+</nav>
+
+<!-- Property Details Section -->
+<section class="property-details">
+    <div class="property-image-slider">
+        <div class="image-container">
+            <!-- Lặp qua các ảnh và hiển thị chúng -->
+            <div th:each="image : ${property.images}" class="slide">
+                <img th:src="@{'/photo/property/' + ${property.id} + '/' + ${image}}" alt="Property Image">
+            </div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <div class="property-info">
+        <h2 th:text="${property.title}">Property Title</h2>
+        <p th:text="${property.description}">Description of the property.</p>
+        <p><strong>Giá (Triệu): </strong><span th:text="${property.price}">$100,000</span></p>
+        <p><strong>Diện tích (m2): </strong><span th:text="${property.area}">200 sqm</span></p>
+        <p><strong>Khu vực: </strong><span th:text="${property.location}">District 1, HCMC</span></p>
+        <p>
+            <strong>Trạng thái: </strong>
+            <span th:switch="${property.verificationStatus.name()}">
+                <span th:case="'WAIT'">Đợi thanh toán</span>
+                <span th:case="'PENDING'">Đang chờ xử lý</span>
+                <span th:case="'APPROVED'">Đã được duyệt</span>
+                <span th:case="'REJECTED'">Bị từ chối</span>
+            </span>
+        </p>
+        <p><strong>Ngày tạo: </strong><span th:text="${property.createAt}">2025-04-17</span></p>
+        <p><strong>Ngày cập nhật: </strong><span th:text="${property.updateAt}">2025-04-20</span></p>
+        <form th:action="@{/properties/addToLegal/{id}(id=${property.id})}" method="post">
+            <button type="submit" class="btn">Liên hệ chúng tôi</button>
+        </form>
+    </div>
+
+    <!-- Suggested Properties Section -->
+    <div class="suggested-properties">
+        <h2>Bất động sản gợi ý</h2>
+        <div class="property-card">
+            <img src="/photo/property/default/1.jpg" alt="Property 1">
+            <div class="property-info">
+                <h3>Biệt thự quận 1</h3>
+                <p>Price: 5,000,000</p>
+                <p>Location: Vietnam</p>
+                <button class="view-btn">Xem chi tiết</button>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/photo/property/default/2.jpg" alt="Property 2">
+            <div class="property-info">
+                <h3>Biệt thự quận 2</h3>
+                <p>Price: 6,000,000</p>
+                <p>Location: Vietnam</p>
+                <button class="view-btn">Xem chi tiết</button>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="/photo/property/default/3.jpg" alt="Property 3">
+            <div class="property-info">
+                <h3>Biệt thự quận 3</h3>
+                <p>Price: 3,500,000</p>
+                <p>Location: Vietnam</p>
+                <button class="view-btn">Xem chi tiết</button>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <img src="/photo/property/default/4.jpg" alt="Property 3">
+            <div class="property-info">
+                <h3>Biệt thự quận 4</h3>
+                <p>Price: 3,500,000</p>
+                <p>Location: Vietnam</p>
+                <button class="view-btn">Xem chi tiết</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script src="/javascript/property-details.js"></script>
+
+</body>
+
+</html>

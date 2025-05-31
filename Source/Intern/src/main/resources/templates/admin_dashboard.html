@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Quản lí</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">Người dùng</a></li>
+        <li><a href="/admin/properties" class="nav-item">Bất động sản</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Giao dịch</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Xác minh</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Pháp lí</a></li>
+
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Bảng điều khiển quản trị</h2>
+    </div>
+
+    <!-- User Section -->
+    <section id="user">
+        <h3>Quản lý người dùng</h3>
+        <a href="/admin/signup" class="btn add-user-btn">Thêm tài khoản</a>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tài Khoản</th>
+                <th>Email</th>
+                <th>Phân quyền</th>
+                <th>Trạng thái</th>
+                <th>Chỉnh sửa</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Loop through user data using Thymeleaf -->
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}">1</td>
+                <td th:text="${user.user_name}">ved</td>
+                <td th:text="${user.email}">ved@gmail.com</td>
+                <td th:text="${user.role.name}">1234</td>
+                <td th:text="${user.statusUser}">Active</td>
+                <td><a th:href="@{/admin/user/edit/{userId}(userId=${user.id})}" class="edit-btn">EDIT</a></td>
+                <td>
+                    <!-- Xóa người dùng -->
+                    <form th:action="@{/admin/user/{userName}(userName=${user.user_name})}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        <button type="submit" class="delete-btn" th:data-username="${user.user_name}">DELETE</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

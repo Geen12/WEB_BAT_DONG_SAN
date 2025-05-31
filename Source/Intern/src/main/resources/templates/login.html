@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/javascript/login.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Đăng nhập</h1>
+    <form action="/login" method="post"> <!-- POST request to /login -->
+        <input type="text" name="username" placeholder="Tài khoản" required> <!-- Add name="username" -->
+        <input type="password" name="password" placeholder="Mật khẩu" required> <!-- Add name="password" -->
+        <button type="submit">Login</button> <!-- Submit button -->
+    </form>
+    <p>Chưa có tài khoản? <a href="/signup">Đăng ký</a></p>
+
+    <!-- Display error message if 'error' parameter exists in the request -->
+    <div th:if="${param.error}">
+        <p style="color: red;">Tên người dùng hoặc mật khẩu không hợp lệ. Vui lòng thử lại.</p>
+    </div>
+
+    <!-- Floating circles for animation -->
+    <div class="floating-circles">
+        <div class="circle" style="width: 50px; height: 50px; top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="circle" style="width: 30px; height: 30px; top: 40%; left: 50%; animation-delay: 1s;"></div>
+        <div class="circle" style="width: 70px; height: 70px; top: 70%; left: 80%; animation-delay: 2s;"></div>
+    </div>
+</div>
+
+</body>
+</html>

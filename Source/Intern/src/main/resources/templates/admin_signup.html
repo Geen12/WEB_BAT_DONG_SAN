@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+<div class="form-container">
+    <h2>Đăng ký Người Dùng</h2>
+    <!-- Form đăng ký người dùng -->
+    <form th:action="@{/admin/signup}" method="post">
+        <div class="form-group">
+            <input type="text" id="username" name="userName" placeholder=" " required th:value="${userDTO.userName}">
+            <label for="username">Tài khoản</label>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder=" " required>
+            <label for="password">Mật khẩu</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="full_name" name="fullName" placeholder=" " required th:value="${userDTO.fullName}">
+            <label for="full_name">Họ và Tên</label>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" placeholder=" " required th:value="${userDTO.email}">
+            <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="phone_number" name="phoneNumber" placeholder=" " required th:value="${userDTO.phoneNumber}">
+            <label for="phone_number">Số điện thoại</label>
+        </div>
+        <div class="form-group">
+            <input type="text" id="address" name="address" placeholder=" " required th:value="${userDTO.address}">
+            <label for="address">Địa chỉ</label>
+        </div>
+        <div class="form-group">
+            <input type="date" id="date_of_birth" name="dateOfBirth" required th:value="${userDTO.dateOfBirth}">
+            <label for="date_of_birth">Ngày sinh</label>
+        </div>
+        <div class="form-group">
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected></option>
+                <option value="MALE">Nam</option>
+                <option value="FEMALE">Nữ</option>
+            </select>
+            <label for="gender">Giới tính</label>
+        </div>
+        <div class="form-group">
+            <select id="role" name="role" required>
+                <option value="" disabled selected></option>
+                <option value="USER">USER</option>
+                <option value="ADMIN">ADMIN</option>
+                <option value="VERIFICATION">VERIFICATION</option>
+                <option value="LEGAL">LEGAL</option>
+            </select>
+            <label for="role">Phân quyền</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="accept_terms" name="acceptTerms" required>
+            <label for="accept_terms">Tôi chấp nhận các điều khoản và điều kiện</label>
+        </div>
+        <button type="submit" class="btn">Đăng ký</button>
+    </form>
+</div>
+</body>
+</html>

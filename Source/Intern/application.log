@@ -1,0 +1,391 @@
+2025-05-31T16:06:21.888+07:00  INFO 20240 --- [Intern] [main] com.example.Intern.InternApplication     : Starting InternApplication using Java 17.0.12 with PID 20240 (C:\Users\khoav\Downloads\project\Intern\target\classes started by khoav in C:\Users\khoav\Downloads\project\Intern)
+2025-05-31T16:06:21.897+07:00 DEBUG 20240 --- [Intern] [main] com.example.Intern.InternApplication     : Running with Spring Boot v3.4.0, Spring v6.2.0
+2025-05-31T16:06:21.900+07:00  INFO 20240 --- [Intern] [main] com.example.Intern.InternApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-05-31T16:06:22.918+07:00  INFO 20240 --- [Intern] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-31T16:06:22.919+07:00  INFO 20240 --- [Intern] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-05-31T16:06:22.956+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.LegalSupportRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.958+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.PaymentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.960+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.PropertyRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.962+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.TokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.963+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.TransactionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.967+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.970+07:00  INFO 20240 --- [Intern] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.Intern.Repository.VerificationRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-05-31T16:06:22.970+07:00  INFO 20240 --- [Intern] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 0 JDBC repository interfaces.
+2025-05-31T16:06:22.980+07:00  INFO 20240 --- [Intern] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-31T16:06:22.982+07:00  INFO 20240 --- [Intern] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31T16:06:23.028+07:00  INFO 20240 --- [Intern] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 7 JPA repository interfaces.
+2025-05-31T16:06:23.723+07:00  INFO 20240 --- [Intern] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-31T16:06:23.737+07:00  INFO 20240 --- [Intern] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-31T16:06:23.737+07:00  INFO 20240 --- [Intern] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-05-31T16:06:23.798+07:00  INFO 20240 --- [Intern] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-31T16:06:23.799+07:00  INFO 20240 --- [Intern] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1822 ms
+2025-05-31T16:06:23.979+07:00  INFO 20240 --- [Intern] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31T16:06:24.057+07:00  INFO 20240 --- [Intern] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-05-31T16:06:24.106+07:00  INFO 20240 --- [Intern] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-31T16:06:24.382+07:00  INFO 20240 --- [Intern] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31T16:06:24.411+07:00  INFO 20240 --- [Intern] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-31T16:06:24.619+07:00  INFO 20240 --- [Intern] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ccdacf5
+2025-05-31T16:06:24.621+07:00  INFO 20240 --- [Intern] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-31T16:06:24.681+07:00  WARN 20240 --- [Intern] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-31T16:06:24.699+07:00  INFO 20240 --- [Intern] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-31T16:06:25.727+07:00  INFO 20240 --- [Intern] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31T16:06:25.913+07:00  INFO 20240 --- [Intern] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T16:06:26.220+07:00  INFO 20240 --- [Intern] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-31T16:06:27.038+07:00  WARN 20240 --- [Intern] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-31T16:06:27.084+07:00  INFO 20240 --- [Intern] [main] o.s.s.p.JdbcUserDetailsManager           : No authentication manager set. Reauthentication of users when changing passwords will not be performed.
+2025-05-31T16:06:27.088+07:00  INFO 20240 --- [Intern] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2025-05-31T16:06:27.190+07:00  INFO 20240 --- [Intern] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-05-31T16:06:27.443+07:00 DEBUG 20240 --- [Intern] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, UsernamePasswordAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-31T16:06:27.819+07:00  INFO 20240 --- [Intern] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-31T16:06:27.828+07:00  INFO 20240 --- [Intern] [main] com.example.Intern.InternApplication     : Started InternApplication in 6.477 seconds (process running for 7.041)
+2025-05-31T16:06:44.201+07:00  INFO 20240 --- [Intern] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31T16:06:44.202+07:00  INFO 20240 --- [Intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-31T16:06:44.204+07:00  INFO 20240 --- [Intern] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-31T16:06:44.233+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-05-31T16:06:44.241+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-05-31T16:06:44.656+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.829+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:06:44.829+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:06:44.829+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:06:44.829+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:06:44.830+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:06:44.830+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:06:44.830+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:06:44.830+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:06:44.845+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.845+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.854+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:06:44.855+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:06:44.855+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:06:44.856+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:06:44.857+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:06:44.857+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:06:44.859+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.859+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:06:44.860+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:06:44.865+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.866+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:06:44.867+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:06:44.880+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.882+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.882+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.885+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.892+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.911+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2025-05-31T16:06:44.911+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /favicon.ico
+2025-05-31T16:06:44.917+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:06:44.925+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /error
+2025-05-31T16:06:44.925+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /error
+2025-05-31T16:06:44.977+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.123+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:08.124+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:08.138+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.152+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:08.152+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:08.152+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:08.152+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:08.152+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:08.153+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:08.153+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:08.153+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:08.155+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.155+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.155+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.155+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.160+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:08.161+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:08.161+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:08.161+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:08.162+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:08.162+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:08.164+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.166+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.160+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:08.169+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:08.170+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:08.170+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:08.175+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.175+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.178+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.899+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:08.899+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:08.916+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.931+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:08.931+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:08.931+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:08.931+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:08.932+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:08.932+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:08.932+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:08.932+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:08.934+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.934+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.934+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.935+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.939+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:08.940+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:08.940+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:08.940+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:08.940+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:08.941+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:08.941+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:08.941+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:08.942+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:08.942+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:08.943+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.944+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.947+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.947+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:08.952+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.537+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:09.538+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:09.551+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:09.568+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:09.570+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.571+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.572+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.572+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.576+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:09.576+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:09.577+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:09.577+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:09.578+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:09.579+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:09.578+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:09.580+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:09.580+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:09.580+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.581+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:09.583+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.585+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.587+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.590+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.780+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:09.780+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:09.791+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:09.805+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:09.808+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.809+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.809+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.812+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:09.812+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:09.813+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:09.813+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:09.815+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.815+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.818+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:09.818+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:09.818+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:09.818+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:09.818+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:09.818+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:09.821+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.821+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:09.826+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.000+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:10.000+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:10.013+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.028+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:10.028+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:10.028+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:10.029+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:10.028+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:10.029+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:10.029+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:10.029+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:10.032+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.032+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.033+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.033+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.037+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:10.037+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:10.037+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:10.037+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:10.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:10.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:10.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:10.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:10.041+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.041+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.042+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.044+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:10.044+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:10.045+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:10.051+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.006+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-05-31T16:07:11.007+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-05-31T16:07:11.017+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:11.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:11.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:11.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:11.039+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:11.038+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:11.039+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:11.039+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:11.041+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.041+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.041+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.041+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.047+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:11.047+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:11.048+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:11.048+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:11.048+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:11.049+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:11.049+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:11.050+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:11.047+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:11.054+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.054+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:11.054+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.053+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.058+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:11.057+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.580+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:17.580+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:17.591+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.612+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:17.613+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:17.614+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:17.614+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:17.614+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:17.614+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:17.614+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:17.614+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:17.615+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.616+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.617+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.618+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.622+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:17.622+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:17.622+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:17.623+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:17.626+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:17.626+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.627+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:17.628+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:17.629+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:17.626+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.622+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:17.629+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:17.631+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.636+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:17.638+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.936+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-05-31T16:07:18.937+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-05-31T16:07:18.947+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:18.965+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:18.967+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.968+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.968+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.968+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.972+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:18.972+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:18.972+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:18.972+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:18.972+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:18.972+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:18.973+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:18.973+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:18.975+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:18.975+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:18.976+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.976+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.977+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.975+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:18.984+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.361+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /index
+2025-05-31T16:07:19.361+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /index
+2025-05-31T16:07:19.370+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.389+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:19.389+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:19.389+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:19.389+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:19.389+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:19.389+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:19.390+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:19.390+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:19.393+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.394+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.394+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.395+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.398+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:19.398+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:19.398+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:19.399+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:19.402+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:19.403+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.403+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.403+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:19.405+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:19.405+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:19.406+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:19.406+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:19.407+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.408+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:19.412+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.780+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /
+2025-05-31T16:07:27.780+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /
+2025-05-31T16:07:27.790+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/2/1.jpg
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /css/index.css
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/1/1.jpg
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /javascript/index.js
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/1/1.jpg
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /css/index.css
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /javascript/index.js
+2025-05-31T16:07:27.811+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/2/1.jpg
+2025-05-31T16:07:27.813+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.813+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.813+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.813+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.820+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/6/1.jpg
+2025-05-31T16:07:27.820+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/3/1.jpg
+2025-05-31T16:07:27.820+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/3/1.jpg
+2025-05-31T16:07:27.820+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/6/1.jpg
+2025-05-31T16:07:27.820+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/4/1.jpg
+2025-05-31T16:07:27.821+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/background.jpg
+2025-05-31T16:07:27.821+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/4/1.jpg
+2025-05-31T16:07:27.823+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.820+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /photo/property/5/1.jpg
+2025-05-31T16:07:27.824+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/5/1.jpg
+2025-05-31T16:07:27.825+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.825+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.821+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /photo/property/background.jpg
+2025-05-31T16:07:27.827+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:07:27.833+07:00 DEBUG 20240 --- [Intern] [http-nio-8080-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-05-31T16:16:53.103+07:00  INFO 20240 --- [Intern] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-31T16:16:53.189+07:00  INFO 20240 --- [Intern] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-31T16:16:53.194+07:00  INFO 20240 --- [Intern] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31T16:16:53.197+07:00  INFO 20240 --- [Intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-31T16:16:53.201+07:00  INFO 20240 --- [Intern] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #84fab0, #8fd3f4);
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container .form-group {
+    margin-bottom: 25px; /* Tăng khoảng cách giữa các field */
+    position: relative;
+}
+
+.form-container .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #777;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form-container .form-group input,
+.form-container .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-container .form-group input:focus,
+.form-container .form-group select:focus {
+    border-color: #84fab0;
+}
+
+.form-container .form-group input:focus + label,
+.form-container .form-group select:focus + label,
+.form-container .form-group input:not(:placeholder-shown) + label,
+.form-container .form-group select:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #84fab0;
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 10px;
+    background: #84fab0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-container .btn:hover {
+    background: #63caa7;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-container .checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-container .checkbox-container label {
+    position: static;
+    transform: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-container .checkbox-container input {
+    width: auto;
+    margin: 0;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Support Management</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Quản lí</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">Người dùng</a></li>
+        <li><a href="/admin/properties" class="nav-item">Bất động sản</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Giao dịch</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Xác minh</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Pháp lí</a></li>
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Quản lí pháp lí</h2>
+    </div>
+
+    <!-- Filter Form -->
+    <section>
+        <form th:action="@{/admin/legalsupport}" method="get">
+            <label for="status">Lọc theo trạng thái:</label>
+            <select name="status" id="status">
+                <option value="PENDING">Đang xử lí</option>
+                <option value="IN_PROGRESS">Đang tiến hành</option>
+                <option value="COMPLETED">Hoàn thành</option>
+                <option value="CANCELLED">Đã hủy</option>
+            </select>
+            <button type="submit">Lọc</button>
+        </form>
+    </section>
+
+    <!-- Legal Support List Section -->
+    <section id="legal-support">
+        <h3>Tất cả hỗ trợ pháp lí</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Người hỗ trợ giấy tờ</th>
+                <th>ID bất động sản</th>
+                <th>Người mua</th>
+                <th>Kiểu dịch vụ</th>
+                <th>Trạng thái</th>
+                <th>Ngày tạo</th>
+                <th>Ngày cập nhật</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Loop through the list of legal support services -->
+            <tr th:each="legalSupport : ${legalSupports}">
+                <td th:text="${legalSupport.id}">1</td>
+                <td th:text="${legalSupport.user?.user_name ?: 'Chưa có người nhận'}">User Name</td>
+                <td th:text="${legalSupport.property.id}">Property Title</td>
+                <td th:text="${legalSupport.buyer.user_name}">Property Title</td>
+                <td th:text="${legalSupport.serviceType}">Service Type</td>
+                <td th:text="${legalSupport.status}">Status</td>
+                <td th:text="${legalSupport.createAt}">createAt</td>
+                <td th:text="${legalSupport.updateAt}">updateAt</td>
+                <td>
+                    <!-- Nút Accept -->
+                    <form th:action="@{/legalsupport/{legalSupportId}/delete(legalSupportId=${legalSupport.id})}" method="post">
+                        <button type="submit" class="rejected-btn">Delete</button>
+                    </form>
+                    <!-- Nút IN_PROGRESS -->
+                    <form th:action="@{/legalsupport/{legalSupportId}/inProcess(legalSupportId=${legalSupport.id})}" method="post">
+                        <button type="submit" class="accept-btn">Accept</button>
+                    </form>
+                    <!-- Nút IN_PROGRESS -->
+                    <form th:action="@{/legalsupport/{legalSupportId}/completed(legalSupportId=${legalSupport.id})}" method="post">
+                        <button type="submit" class="accept-btn">Completed</button>
+                    </form>
+                    <!-- Nút cancel -->
+                    <form th:action="@{/legalsupport/{legalSupportId}/canceled(legalSupportId=${legalSupport.id})}" method="post">
+                        <button type="submit" class="rejected-btn">Cancelled</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Details</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Funda Web IT</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">User</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Legal Support</a></li>
+        <li><a href="/admin/properties" class="nav-item">Property</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Transaction</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Verification</a></li>
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Transaction Details</h2>
+    </div>
+
+    <!-- Transaction Details Section -->
+    <section id="transaction-details">
+        <div class="property-detail-card">
+            <h3 th:text="'Transaction ID: ' + ${transaction.id}">Transaction ID: 1</h3>
+            <p th:text="'Buyer: ' + ${transaction.buyer.user_name}">Buyer: John Doe</p>
+            <p th:text="'Property: ' + ${transaction.property.title}">Property: Modern Apartment</p>
+            <p th:text="'Amount: ' + ${transaction.transactionAmount}">Amount: $500,000</p>
+            <p th:text="'Status: ' + ${transaction.status}">Status: Completed</p>
+            <p th:text="'Transaction Date: ' + ${transaction.transactionDate}">Transaction Date: 2025-04-17</p>
+            <button class="btn">Contact Buyer</button>
+        </div>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

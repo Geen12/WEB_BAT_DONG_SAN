@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Support Details</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Funda Web IT</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">User</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Legal Support</a></li>
+        <li><a href="/admin/properties" class="nav-item">Property</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Transaction</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Verification</a></li>
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Legal Support Details</h2>
+    </div>
+
+    <!-- Legal Support Details Section -->
+    <section id="legal-support-details">
+        <div class="property-detail-card">
+            <h3 th:text="${legalSupport.serviceType}">Service Type</h3>
+            <p th:text="'User: ' + ${legalSupport.user.user_name}">User: John Doe</p>
+            <p th:text="'Property: ' + ${legalSupport.property.title}">Property: Modern Apartment</p>
+            <p th:text="'Status: ' + ${legalSupport.status}">Status: Pending</p>
+            <p th:text="'Created At: ' + ${legalSupport.createAt}">Created At: 2025-04-17</p>
+            <button class="btn">Contact User</button>
+        </div>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

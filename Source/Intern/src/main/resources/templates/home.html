@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web bất động sản</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/javascript/index.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">
+        <h1>Trang web bất động sản</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index">Trang chủ</a></li>
+        <li><a href="properties">Bất động sản</a></li>
+        <li><a href="login">Đăng nhập</a></li>
+    </ul>
+</nav>
+
+<!-- Main Section -->
+<section class="main">
+    <div class="content">
+        <h2>Chào mừng đến với công ty bất động sản</h2>
+        <p>Bất động sản mơ ước của bạn chỉ cách bạn một cú nhấp chuột!</p>
+        <a href="properties" class="btn">Xem Qua Các Bất Động Sản</a>
+    </div>
+</section>
+
+<!-- Featured Properties -->
+<section class="featured-properties">
+    <h2>Bất động sản nổi bật</h2>
+    <div class="property-cards">
+        <!-- Loop through properties using Thymeleaf -->
+        <div th:each="property, stat : ${properties}"
+             th:if="${stat.index < 6}"
+             class="card">
+            <img th:src="${property.imageUrl}" alt="Property Image">
+            <div class="card-info">
+                <h3 th:text="${property.title}">Modern Apartment</h3>
+                <p th:text="${#numbers.formatDecimal(property.price, 0, 0)} + ' triệu VNĐ'"></p>
+                <a th:href="@{/properties/property-details/{propertyId}(propertyId=${property.id})}" class="btn">Xem chi tiết</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+
+</html>

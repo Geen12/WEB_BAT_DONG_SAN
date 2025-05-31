@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="/css/property.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Funda Web IT</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">User</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Legal Support</a></li>
+        <li><a href="/admin/properties" class="nav-item">Property</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Transaction</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Verification</a></li>
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Property Details</h2>
+    </div>
+
+    <!-- Property Details Section -->
+    <section id="property-details">
+        <div class="property-detail-card">
+            <h3 th:text="${property.title}">Modern Apartment</h3>
+            <p th:text="'Price: ' + ${property.price}">$500,000</p>
+            <p th:text="'Location: ' + ${property.location}">New York</p>
+            <p th:text="'Status: ' + ${property.verificationStatus}">Verified</p>
+            <p th:text="'Description: ' + ${property.description}">A beautiful modern apartment located in the heart of the city.</p>
+            <button class="btn">Contact Us</button>
+        </div>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

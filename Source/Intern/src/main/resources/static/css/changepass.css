@@ -1,0 +1,135 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #6a11cb, #2575fc); /* Gradient background */
+}
+
+/* Form Container Styling */
+.change-password-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Styling */
+.change-password-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Form group styling */
+.change-password-container .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Label Styling */
+.change-password-container .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+    color: #888;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Input Field Styling */
+.change-password-container .form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus Effect */
+.change-password-container .form-group input:focus {
+    border-color: #2575fc;  /* Blue border on focus */
+}
+
+/* Label Position when Focused */
+.change-password-container .form-group input:focus + label,
+.change-password-container .form-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #2575fc;
+}
+
+/* Button Styling */
+.change-password-container .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-password-container .btn:hover {
+    background-color: #6a11cb;  /* Hover effect */
+}
+
+/* Back Link Styling */
+.change-password-container .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.change-password-container .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Error Message Styling */
+.change-password-container .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Success Message Styling */
+.change-password-container .success {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}

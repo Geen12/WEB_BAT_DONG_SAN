@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web bất động sản</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/javascript/index.js"></script>
+    <style>
+        /* Thêm CSS vào đây */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh; /* Chiều cao của phần chứa ảnh */
+            margin-top: 20px; /* Khoảng cách trên của phần chứa ảnh */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Nếu bạn muốn thêm góc bo tròn cho ảnh */
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="logo">
+        <h1>Trang web bất động sản</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index">Trang chủ</a></li>
+        <li><a href="properties">Bất động sản</a></li>
+        <li><a href="change-password">Đổi mật khẩu</a></li>
+        <li><a href="logout">Đăng Xuất</a></li>
+    </ul>
+</nav>
+
+<!-- Tấm ảnh ở giữa -->
+<div class="image-container">
+    <img src="/photo/property/pay.jpg" alt="Property Image">
+    <p>Nội dung chuyển khoản: username_email_sdt</p>
+</div>
+
+
+</body>
+</html>

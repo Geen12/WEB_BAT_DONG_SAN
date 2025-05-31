@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+</head>
+<body>
+
+<h2>User List (Status: [[${statusUser}]])</h2>
+
+<!-- Hiển thị thông báo nếu không có người dùng -->
+<div th:if="${message != null}">
+    <p th:text="${message}"></p>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Lặp qua danh sách người dùng -->
+    <tr th:each="user : ${users}">
+        <td th:text="${user.user_name}">Username</td>
+        <td th:text="${user.email}">Email</td>
+        <td th:text="${user.statusUser}">Status</td>
+        <td>
+            <!-- Cập nhật trạng thái người dùng -->
+            <form th:action="@{/users/status/{userName}(userName=${user.user_name})}" method="put">
+                <select name="statusUser">
+                    <option value="UNCONFIRMED">Unconfirmed</option>
+                    <option value="CONFIRMED">Confirmed</option> <!-- Thêm CONFIRMED -->
+                </select>
+                <button type="submit">Update</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

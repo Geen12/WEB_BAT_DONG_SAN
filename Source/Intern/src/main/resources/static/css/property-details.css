@@ -1,0 +1,235 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+}
+
+/* Property Details Section */
+.property-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 20px 50px; /* Adjust padding to fit the larger layout */
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.property-image-slider {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.image-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image-container .slide {
+    min-width: 100%;
+    transition: opacity 1s ease-in-out;
+}
+
+.property-image-slider .prev, .property-image-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.property-image-slider .prev {
+    left: 0;
+}
+
+.property-image-slider .next {
+    right: 0;
+}
+
+/* Property Info */
+.property-info {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.property-info h2 {
+    font-size: 32px; /* Increase font size for titles */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.property-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.property-info .btn {
+    background-color: #00bfff;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.property-info .btn:hover {
+    background-color: #007bb5;
+}
+
+/* Suggested Properties Section */
+.suggested-properties {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.suggested-properties .property-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.suggested-properties .property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.suggested-properties .property-card h3 {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.suggested-properties .property-card .btn {
+    margin-top: 15px;
+    background-color: #00bfff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.suggested-properties .property-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .property-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .property-image-slider {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .property-info {
+        margin-top: 20px;
+        max-width: 90%;
+    }
+
+    .suggested-properties {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .suggested-properties .property-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Button Style */
+.view-btn {
+    background-color: #00bfff;  /* Màu nền xanh dương sáng */
+    color: white;  /* Màu chữ trắng */
+    padding: 10px 20px;  /* Padding xung quanh chữ */
+    font-size: 16px;  /* Kích thước chữ */
+    border-radius: 5px;  /* Bo góc cho nút */
+    border: none;  /* Loại bỏ đường viền */
+    cursor: pointer;  /* Thêm con trỏ tay khi hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Hiệu ứng chuyển màu nền và hiệu ứng nhấn nút */
+}
+
+/* Hover Effect */
+.view-btn:hover {
+    background-color: #007bb5;  /* Đổi màu nền khi hover */
+    transform: scale(1.05);  /* Tăng kích thước nút một chút khi hover */
+}
+
+/* Active Effect */
+.view-btn:active {
+    background-color: #005f8d;  /* Đổi màu nền khi nút được nhấn */
+    transform: scale(1);  /* Hủy bỏ hiệu ứng phóng to khi nhấn */
+}

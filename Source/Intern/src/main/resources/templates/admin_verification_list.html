@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý xác minh</title>
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">
+        <h1>Quản lí</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/admin/users" class="nav-item">Người dùng</a></li>
+        <li><a href="/admin/properties" class="nav-item">Bất động sản</a></li>
+        <li><a href="/admin/transactions" class="nav-item">Giao dịch</a></li>
+        <li><a href="/admin/verifications" class="nav-item">Xác minh</a></li>
+        <li><a href="/admin/legalsupport" class="nav-item">Pháp lí</a></li>
+    </ul>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+    <div class="header">
+        <h2>Quản lí xác minh</h2>
+    </div>
+
+    <!-- Filter Section -->
+    <section id="filter">
+        <form th:action="@{/admin/verifications}" method="get">
+            <label for="status">Lọc theo trạng thái:</label>
+            <select id="status" name="status">
+                <option value="">Chọn trạng thái</option>
+                <option value="PENDING" th:selected="${status == 'PENDING'}">Chưa xác minh</option>
+                <option value="APPROVED" th:selected="${status == 'APPROVED'}">Đã phê duyệt</option>
+                <option value="REJECTED" th:selected="${status == 'REJECTED'}">Bị từ chối</option>
+            </select>
+
+            <button type="submit" class="btn">Lọc</button>
+        </form>
+    </section>
+
+    <!-- Verification List Section -->
+    <section id="verification">
+        <h3>Tất cả xác minh</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Người xác minh</th>
+                <th>ID bất động sản</th>
+                <th>Miêu tả</th>
+                <th>Trạng thái</th>
+                <th>Ngày tạo</th>
+                <th>Hành động</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Loop through the list of verifications -->
+            <tr th:each="verification : ${verifications}">
+                <td th:text="${verification.id}">1</td>
+                <td th:text="${verification.verifier?.user_name ?: 'Chưa có người nhận'}">Verifier Name</td>
+                <td th:text="${verification.property.id}">Property Title</td>
+                <td th:text="${verification.notes}">Notes</td>
+                <td th:text="${verification.property.verificationStatus}">Status</td>
+                <td th:text="${verification.verificationDate}">Date</td>
+                <td>
+                    <!-- Xóa kiểm chứng -->
+                    <form th:action="@{/admin/verifications/{verificationId}(verificationId=${verification.id})}" method="post">
+                        <input type="hidden" name="_method" value="DELETE" />
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+
+                    <!-- Nút Accept -->
+                    <form th:action="@{/verifications/{verificationId}/accept(verificationId=${verification.id})}" method="post">
+                        <button type="submit" class="accept-btn">Accept</button>
+                    </form>
+
+                    <!-- Nút approved -->
+                    <form th:action="@{/verifications/{verificationId}/approved(verificationId=${verification.id})}" method="post">
+                        <button type="submit" class="accept-btn">Approved</button>
+                    </form>
+
+                    <!-- Nút rejected -->
+                    <form th:action="@{/verifications/{verificationId}/rejected(verificationId=${verification.id})}" method="post">
+                        <button type="submit" class="rejected-btn">Rejected</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+
+<script src="/javascript/admin_dashboard.js"></script>
+</body>
+</html>

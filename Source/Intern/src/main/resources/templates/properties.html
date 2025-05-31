@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties List</title>
+    <link rel="stylesheet" href="/css/property.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">
+        <h1>Trang web bất động sản</h1>
+    </div>
+    <ul class="nav-links">
+        <li><a href="/">Trang chủ</a></li>
+        <li><a href="/properties">Bất động sản</a></li>
+    </ul>
+</div>
+
+<!-- Search Form -->
+<div class="search-container">
+    <form method="get" action="/properties">
+        <input type="text" name="title" placeholder="Tìm kiếm theo tiêu đề" th:value="${param.title}">
+        <input type="text" name="location" placeholder="Tìm kiếm theo vị trí" th:value="${param.location}">
+        <input type="number" name="area" placeholder="Tìm kiếm theo diện tích (m2)" th:value="${param.area}">
+
+        <!-- Search Button -->
+        <button type="submit">Tìm kiếm</button>
+
+        <!-- Clear Search Button -->
+        <button type="reset" onclick="window.location.href='/properties';">Xóa tìm kiếm</button>
+
+        <!-- Add Property Button -->
+        <a href="/properties/add" class="add-property-btn">Thêm bất động sản</a> <!-- Link to Add Property Page -->
+    </form>
+</div>
+
+<!-- Property List Section -->
+<div class="featured-properties">
+    <h2>Danh sách tất cả các bất động sản</h2>
+    <div class="property-cards" id="property-cards">
+        <!-- Loop through properties -->
+        <div th:each="property : ${properties.content}" class="card">
+            <img th:src="@{'/photo/property/' + ${property.id} + '/1.jpg'}" alt="Property Image" />
+            <div class="card-info">
+                <h3 th:text="${property.title}"></h3>
+                <p th:text="${property.description}"></p>
+                <a th:href="@{/properties/property-details/{propertyId}(propertyId=${property.id})}" class="btn">Xem chi tiết</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <a th:if="${currentPage > 1}" th:href="@{/properties/?page={nextPage}(nextPage=${currentPage - 1})}" class="prev-button">Prev</a>
+
+        <!-- Page numbers -->
+        <span th:each="i : ${#numbers.sequence(1, totalPages)}">
+            <a th:href="@{/properties/?page={nextPage}(nextPage=${i})}" th:text="${i}" class="pagination-button" th:classappend="${i == currentPage} ? 'active' : ''"></a>
+        </span>
+
+        <!-- Next button -->
+        <a th:if="${currentPage < totalPages}" th:href="@{/properties/?page={nextPage}(nextPage=${currentPage + 1})}" class="next-button">Next</a>
+    </div>
+</div>
+
+<script src="/javascript/property.js"></script>
+</body>
+</html>
